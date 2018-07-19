@@ -1,0 +1,1 @@
+bash run_eval_wzn.sh ../../../avod/data/outputs/pyramid_people_with_2NHSP_example_train/predictions/kitti_predictions_3d/val/ 0.1 120000 pyramid_people_with_2NHSP_example_train ../../../scripts/offline_eval/results/

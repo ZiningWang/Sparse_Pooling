@@ -1,0 +1,3 @@
+# Avod
+avod/
+.so
