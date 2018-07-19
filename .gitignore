@@ -1,0 +1,35 @@
+MV3D_TF_release/
+avod/data
+avod/checkpoints
+avod/logs
+
+# Python
+*.pyc
+__pycache__
+
+# Coverage
+*.coverage
+
+# Misc
+run.sh
+tags
+
+# PyCharm
+.idea
+
+# Rope
+.ropeproject
+
+# Distribution / packaging
+build/
+dist/
+avod.egg-info/
+
+# Protobuf files
+*_pb2.py
+
+# line_profiler
+*.lprof
+
+# tf_profiler
+*.json
