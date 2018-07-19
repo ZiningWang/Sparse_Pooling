@@ -5,7 +5,7 @@
 
 ## Claim
 
-The code is based on the latest (May 10 2018) avod-fpn from [Avod-FPN of Jason Ku](https://github.com/kujason/avod). This repository is aimed to show the performance different by adding Sparse Pooling to the avod for better fusion. There is only little change on the original code to incorporate the Sparse Non-homogeneous Pooling Layer. You can run both the original avod-fpn and the modified one with Sparse Pooling with the same tutorial of avod.
+The code is based on the latest (May 10 2018) avod-fpn from [Avod-FPN of Jason Ku](https://github.com/kujason/avod). This repository is aimed to show the performance different by adding Sparse Pooling to the avod for better fusion. There is only little change on the original code to incorporate the Sparse Non-homogeneous Pooling Layer. You can run both the original avod-fpn and one with Sparse Pooling in this repository using the same tutorial of avod.
 
 If you are interested in how to efficiently fuse features from different views and sensors. This resipotory is an example of how to add the Sparse Pooling Layer to your own network. [**Fusing Bird View LIDAR Point Cloud and Front View Camera Image for Deep Object Detection**](https://arxiv.org/abs/1711.06703)
 
@@ -104,12 +104,12 @@ data
 ### Training Configuration
 There are sample configuration files for training inside `avod/configs`. You can train on the example config, or modify an existing configuration. To train a new configuration, copy a config, e.g. `avod_cars_example.config`, rename this file to a unique experiment name and make sure the file name matches the `checkpoint_name: 'avod_cars_example'` entry inside your config.
 
-WZN: 5 additional parameters are added to enable different kinds of Sparse Pooling.
-rpn_use_sparse_pooling: True                      Enable Sparse Pooling right before RPN
-rpn_sparse_pooling_use_batch_norm: True           Use Batch Norm after the Sparse Pooling right before RPN
-rpn_sparse_pooling_conv_after_fusion: True        Add another convolution after the Sparse Pooling right before RPN
-rpn_sparse_pooling_after_vgg: True                Enable Sparse Pooling right after VGG16 and before FPN (no batch norm, no conv)
-rpn_dual_sparse_pooling_after_vgg: True           Fuse both LIDAR to camera and camera to LIDAR
+WZN: 5 additional parameters are added to enable different kinds of Sparse Pooling.  
+rpn_use_sparse_pooling: True                      Enable Sparse Pooling right before RPN  
+rpn_sparse_pooling_use_batch_norm: True           Use Batch Norm after the Sparse Pooling right before RPN  
+rpn_sparse_pooling_conv_after_fusion: True        Add another convolution after the Sparse Pooling right before RPN  
+rpn_sparse_pooling_after_vgg: True                Enable Sparse Pooling right after VGG16 and before FPN (no batch norm, no conv)  
+rpn_dual_sparse_pooling_after_vgg: True           Fuse both LIDAR to camera and camera to LIDAR  
 
 
 ### Run Trainer
@@ -154,5 +154,27 @@ The `ckpt_indices` here indicates the indices of the checkpoint in the list. If 
 All results should be saved in `avod/data/outputs`. Here you should see `proposals_and_scores` and `final_predictions_and_scores` results. To visualize these results, you can run `demos/show_predictions_2d.py`. The script needs to be configured to your specific experiments. The `scripts/offline_eval/plot_ap.py` will plot the AP vs. step, and print the 5 highest performing checkpoints for each evaluation metric at the moderate difficulty.
 
 ## GET KITTI RESULT
-To get the result for submission to KITTI, see scripts/offline_eval/save_kitti_predictions.py
+To get the result for submission to KITTI, see scripts/offline_eval/save_kitti_predictions.py  
 To get AP on the validation set, see scripts/offline_eval/sample_command
+
+
+## LICENSE
+Copyright (c) 2018 [Jason Ku](https://github.com/kujason), [Melissa Mozifian](https://github.com/melfm) [Zining Wang](https://github.com/ZiningWang)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
