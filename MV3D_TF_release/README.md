@@ -63,7 +63,7 @@ This is an Tensorflow implementation of the fusion of VoxelNet and MSCNN, which 
 
 5. Download pre-trained ImageNet models
 
-   Download the pre-trained MSCNN models (VGG16 trained with the code from [[MSCNN]](https://github.com/zhaoweicai/mscnn)) [[Google Drive]](https://drive.google.com/file/d/1RZZrxmfUzkGLEYrVYkXDEk3lNXR36xJS/view?usp=sharing) 
+   Download the pre-trained MSCNN models [[Google Drive]](https://drive.google.com/file/d/1RZZrxmfUzkGLEYrVYkXDEk3lNXR36xJS/view?usp=sharing) (VGG16 trained with the code from [MSCNN](https://github.com/zhaoweicai/mscnn)) 
 
 ```Shell
     mv mscnn_ped_cyc_kitti_trainval_2nd_iter_15000.mat $MV3D/tests/mscnn_ped_cyc_kitti_trainval_2nd_iter_15000.mat

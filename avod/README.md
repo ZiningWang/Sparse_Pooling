@@ -5,13 +5,25 @@
 
 ## Claim
 
-The code is based on the latest (May 10 2018) avod-fpn from [Avod-FPN of Jason Ku](https://github.com/kujason/avod). This repository is aimed to show the performance different by adding Sparse Pooling to the avod for better fusion. There is only little change on the original code to incorporate the Sparse Non-homogeneous Pooling Layer. You can run both the original avod-fpn and one with Sparse Pooling in this repository using the same tutorial of avod.
+The code is based on the latest (May 10 2018) avod-fpn from [Avod-FPN of Jason Ku](https://github.com/kujason/avod). This repository is aimed to show the difference by adding Sparse Pooling to the avod for better fusion. There is only little change on the original code to incorporate the Sparse Non-homogeneous Pooling Layer. You can run both the original avod-fpn and one with Sparse Pooling in this repository using the same tutorial of avod.
 
 If you are interested in how to efficiently fuse features from different views and sensors. This resipotory is an example of how to add the Sparse Pooling Layer to your own network. [**Fusing Bird View LIDAR Point Cloud and Front View Camera Image for Deep Object Detection**](https://arxiv.org/abs/1711.06703)
 
 If you are interested in the detection network itself. Please refer to [Avod-FPN of Jason Ku](https://github.com/kujason/avod) and [**Joint 3D Proposal Generation and Object Detection from View Aggregation**](https://arxiv.org/abs/1712.02294)
 
 Some result files shown in scripts/results compare the some preliminary performance on peds and cycs between the original avod and avod with Sparse Pooling (other configs are the same) on the VALIDATION dataset. (I am never able to reproduce the test performance of detection networks on KITTI.)
+
+
+## Code added/changed
+### Added:  
+'core/feature_extractors/fusion_bgg_pyramid.py':  For fusion right after vgg  
+'utils/transform.py':  Basic utility functions to preprocess input data  
+'utils/sparse_pool_utils.py': Main functions to construct the Sparse Non-homogeneous Pooling Layer
+
+### Changed:
+'bev_slices.py': See code under '#WZN'. Add additional inputs of voxel indices for Sparse Pooling
+'rpn_model.py':  See code under '#WZN'. Add placeholders and Sparse Pooling layer before rpn (controled by new parameters in config)  
+'model.proto':   Add 5 more parameters to control Sparse Pooling
 
 
 ## Getting Started
