@@ -9,7 +9,7 @@ The code is based on the latest (May 10 2018) avod-fpn from [Avod-FPN of Jason K
 
 If you are interested in how to efficiently fuse features from different views and sensors. This resipotory is an example of how to add the Sparse Pooling Layer to your own network from [**Fusing Bird View LIDAR Point Cloud and Front View Camera Image for Deep Object Detection**](https://arxiv.org/abs/1711.06703)
 
-If you are interested in the detection network itself. Please refer to [Avod-FPN of Jason Ku](https://github.com/kujason/avod) and [**Joint 3D Proposal Generation and Object Detection from View Aggregation**](https://arxiv.org/abs/1712.02294)
+If you are interested in the detection network itself. Please refer to [Avod-FPN of Jason Ku](https://github.com/kujason/avod).
 
 Some result files shown in `scripts/results` compare the some preliminary performance on peds and cycs on the VALIDATION dataset. (I am never able to reproduce the test performance of detection networks on KITTI.)
 
