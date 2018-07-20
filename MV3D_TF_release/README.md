@@ -1,10 +1,9 @@
 WZN2018: This is a simplified version where keeps only my latest modification.
 WZN2018: This is a more simplified version, only keeping the necessary modifications to reproduce the SHPL in the paper with one-stage network. 
 
-# MV3D_TF(In progress)
+# One-stage Fusion-Based Detection Network fusing VoxelNet and MSCNN for Object Detection on KITTI
 
-This is an experimental Tensorflow implementation of the fusion of VoxelNet and MSCNN. The code structure is based on MV3D_TF. However, the 
-network and training process used are different from the original code by a very large extent. 
+This is an Tensorflow implementation of the fusion of VoxelNet and MSCNN, which is the one-stage detection network mentioned in [**Fusing Bird View LIDAR Point Cloud and Front View Camera Image for Deep Object Detection**](https://arxiv.org/abs/1711.06703). The code structure is based on MV3D_TF(an old version, unavailable anymore). However, the network and training process used are different from the original code by a very large extent. 
 
 
 ### Requirements: software
@@ -64,7 +63,7 @@ network and training process used are different from the original code by a very
 
 5. Download pre-trained ImageNet models
 
-   Download the pre-trained MSCNN models (VGG16 trained with the code from TODO:LINK TO MSCNN) [[Google Drive]](https://drive.google.com/open?id=0ByuDEGFYmWsbNVF5eExySUtMZmM) [[Dropbox]](https://www.dropbox.com/s/po2kzdhdgl4ix55/VGG_imagenet.npy?dl=0)
+   Download the pre-trained MSCNN models (VGG16 trained with the code from [[MSCNN]](https://github.com/zhaoweicai/mscnn)) [[Google Drive]](https://drive.google.com/file/d/1RZZrxmfUzkGLEYrVYkXDEk3lNXR36xJS/view?usp=sharing) 
 
 ```Shell
     mv mscnn_ped_cyc_kitti_trainval_2nd_iter_15000.mat $MV3D/tests/mscnn_ped_cyc_kitti_trainval_2nd_iter_15000.mat
@@ -84,76 +83,7 @@ There are other arguments available:
 
 It is also possible to the VoxelNet only with the one-stage detection framework.
 
-### Network Structure
-
-Key idea: Use Lidar bird view to generate anchor boxes, then project those boxes on image to do classification.
-
-![structure](examples/mv3d_4.png)
-
 ### Examples
 
-Image and corresponding Lidar map 
 
-**Note:**
-
-In image:
-
-+ Boxes  without regression
-
-In Lidar:
-
-+ white box: without regression (correspond with image)
-+ purple box: with regression
-
-1.
-
-![figure_20](examples/figure_27.png)
-
-![figure_20](examples/jlidar27.png)
-
-2.
-
-![figure_20](examples/figure_30.png)
-
-![figure_20](examples/lidar30.png)
-
-3. ​
-
-![figure_20](examples/figure_13.png)
-
-![figure_20](examples/lidar13.png)
-
-4.
-
-![figure_20](examples/figure_29.png)
-
-![figure_20](examples/lidar29.png)
-
-### Existing Errors
-
-Mostly due to regression error
-
-![figure_20](examples/figure_10.png)
-
-(error in box 5,6,9)
-
-![figure_20](examples/lidar10.png)
-
-![figure_20](examples/figure_33.png)
-
-(error in 8, 9, 10)
-
-![figure_20](examples/lidar33.png)
-
-### References
-
-[Lidar Birds Eye Views](http://ronny.rest/blog/post_2017_03_26_lidar_birds_eye/)
-
-[part.2: Didi Udacity Challenge 2017 — Car and pedestrian Detection using Lidar and RGB](https://medium.com/@hengcherkeng/part-1-didi-udacity-challenge-2017-car-and-pedestrian-detection-using-lidar-and-rgb-fff616fc63e8)
-
-[Faster_RCNN_TF](https://github.com/smallcorgi/Faster-RCNN_TF)
-
-[Faster R-CNN caffe version](https://github.com/rbgirshick/py-faster-rcnn)
-
-[TFFRCNN](https://github.com/CharlesShang/TFFRCNN)
 

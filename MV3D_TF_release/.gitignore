@@ -6,3 +6,4 @@ kitti/results/
 .zip
 .ipynb_checkpoints
 .pyc
+.mat
