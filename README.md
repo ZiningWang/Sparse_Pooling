@@ -1,20 +1,26 @@
 
 
 
-# Sparse Pooling Implemented on Aggregate View Object Detection
+# Implementation of Sparse Non-homogeneous Pooling on Fusion-based Detection Networks
+Sparse Pooling for LIDAR and Camera Fusion by Zining Wang
 
 ## Claim
 
-The code is based on the latest (May 10 2018) avod-fpn from [Avod-FPN of Jason Ku](https://github.com/kujason/avod). This repository is aimed to show the difference by adding Sparse Pooling to the avod for better fusion. There is only little change on the original code to incorporate the Sparse Non-homogeneous Pooling Layer. You can run both the original avod-fpn and one with Sparse Pooling in this repository using the same tutorial of avod.
+Sparse Pooling is for fusing feature maps from different views and sources. Sparsity comes from the sparse correspondences between cells, such as point cloud. It is not restricted to detection but also useful for segmentation. The main part is based on [**Fusing Bird View LIDAR Point Cloud and Front View Camera Image for Deep Object Detection**](https://arxiv.org/abs/1711.06703), but the SHPL introduced in the paper is also implemented to other fusion-based detection networks in this repository.
 
-If you are interested in how to efficiently fuse features from different views and sensors. This resipotory is an example of how to add the Sparse Pooling Layer to your own network. [**Fusing Bird View LIDAR Point Cloud and Front View Camera Image for Deep Object Detection**](https://arxiv.org/abs/1711.06703)
+As the majority of the code comes from many existing repositories, including [MV3D_TF](https://github.com/leeyevi/MV3D_TF), [Avod-FPN](https://github.com/kujason/avod), [VoxelNet](https://github.com/jeasinema/VoxelNet-tensorflow) and [MSCNN](https://github.com/zhaoweicai/mscnn). If there is any thing inappropriate, please contact me through wangzining@berkeley.edu.
 
-If you are interested in the detection network itself. Please refer to [Avod-FPN of Jason Ku](https://github.com/kujason/avod) and [**Joint 3D Proposal Generation and Object Detection from View Aggregation**](https://arxiv.org/abs/1712.02294)
+## Usage
+The following two networks can be downloaded and run separately.
 
-Some result files shown in scripts/results compare the some preliminary performance on peds and cycs between the original avod and avod with Sparse Pooling (other configs are the same) on the VALIDATION dataset. (I am never able to reproduce the test performance of detection networks on KITTI.)
+`avod` based on [Avod-FPN](https://github.com/kujason/avod) is the additional part. It aims to show the SHPL can be easily added to other networks to allow efficient fusion of feature maps.
+
+`MV3D_TF_release` is the network introduced in the paper. It fuses [VoxelNet](https://github.com/jeasinema/VoxelNet-tensorflow) and [MSCNN](https://github.com/zhaoweicai/mscnn) and uses focal loss for one-stage detection. 
+
 
 
 ## Code added/changed
+This is for avod.
 ### Added:  
 `core/feature_extractors/fusion_bgg_pyramid.py`:  For fusion right after vgg  
 `utils/transform.py`:  Basic utility functions to preprocess input data  
@@ -168,6 +174,10 @@ All results should be saved in `avod/data/outputs`. Here you should see `proposa
 ## GET KITTI RESULT
 To get the result for submission to KITTI, see scripts/offline_eval/save_kitti_predictions.py  
 To get AP on the validation set, see scripts/offline_eval/sample_command
+
+
+## Reference
+The 'Non-homogeneous' term came from [Spatial Transformer Networks](https://github.com/kevinzakka/spatial-transformer-network)
 
 
 ## LICENSE
