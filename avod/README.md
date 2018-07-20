@@ -16,19 +16,19 @@ Some result files shown in scripts/results compare the some preliminary performa
 
 ## Code added/changed
 ### Added:  
-'core/feature_extractors/fusion_bgg_pyramid.py':  For fusion right after vgg  
-'utils/transform.py':  Basic utility functions to preprocess input data  
-'utils/sparse_pool_utils.py': Main functions to construct the Sparse Non-homogeneous Pooling Layer
+`core/feature_extractors/fusion_bgg_pyramid.py`:  For fusion right after vgg  
+`utils/transform.py`:  Basic utility functions to preprocess input data  
+`utils/sparse_pool_utils.py`: Main functions to construct the Sparse Non-homogeneous Pooling Layer
 
 ### Changed:
-'bev_slices.py': See code under '#WZN'. Add additional inputs of voxel indices for Sparse Pooling
-'rpn_model.py':  See code under '#WZN'. Add placeholders and Sparse Pooling layer before rpn (controled by new parameters in config)  
-'model.proto':   Add 5 more parameters to control Sparse Pooling
+`bev_slices.py`: See code under `#WZN`. Add additional inputs of voxel indices for Sparse Pooling
+`rpn_model.py`:  See code under `#WZN`. Add placeholders and Sparse Pooling layer before rpn (controled by new parameters in config)  
+`model.proto`:   Add 5 more parameters to control Sparse Pooling
 
 
 ## Getting Started
 WZN: Implemented and tested on Ubuntu 16.04 with Python 3.5, CUDA9.0, cudnn7.1 and Tensorflow 1.8.0.
-WZN: The following instructions is basically the same with avod except for the 'TRAINING CONFIGURATION' (and 'GET KITTI RESULT')
+WZN: The following instructions is basically the same with avod except for the `TRAINING CONFIGURATION` (and `GET KITTI RESULT`)
 
 
 1. Clone this repo
@@ -117,11 +117,11 @@ data
 There are sample configuration files for training inside `avod/configs`. You can train on the example config, or modify an existing configuration. To train a new configuration, copy a config, e.g. `avod_cars_example.config`, rename this file to a unique experiment name and make sure the file name matches the `checkpoint_name: 'avod_cars_example'` entry inside your config.
 
 WZN: 5 additional parameters are added to enable different kinds of Sparse Pooling.  
-'rpn_use_sparse_pooling: True'                      Enable Sparse Pooling right before RPN  
-'rpn_sparse_pooling_use_batch_norm: True'           Use Batch Norm after the Sparse Pooling right before RPN  
-'rpn_sparse_pooling_conv_after_fusion: True'        Add another convolution after the Sparse Pooling right before RPN  
-'rpn_sparse_pooling_after_vgg: True'                Enable Sparse Pooling right after VGG16 and before FPN (no batch norm, no conv)  
-'rpn_dual_sparse_pooling_after_vgg: True'           Fuse both LIDAR to camera and camera to LIDAR  
+`rpn_use_sparse_pooling: True`                      Enable Sparse Pooling right before RPN  
+`rpn_sparse_pooling_use_batch_norm: True`           Use Batch Norm after the Sparse Pooling right before RPN  
+`rpn_sparse_pooling_conv_after_fusion: True`        Add another convolution after the Sparse Pooling right before RPN  
+`rpn_sparse_pooling_after_vgg: True`                Enable Sparse Pooling right after VGG16 and before FPN (no batch norm, no conv)  
+`rpn_dual_sparse_pooling_after_vgg: True`           Fuse both LIDAR to camera and camera to LIDAR  
 
 
 ### Run Trainer
