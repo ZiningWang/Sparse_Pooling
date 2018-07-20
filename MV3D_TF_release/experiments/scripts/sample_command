@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=2 python3.5 train_voxelnet_fusion.py cars train --exp_name example_train

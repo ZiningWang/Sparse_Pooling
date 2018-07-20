@@ -1,0 +1,262 @@
++ echo Logging output to experiments/logs/mv3d_end2end_.txt.2017-06-30_17-07-50
+Logging output to experiments/logs/mv3d_end2end_.txt.2017-06-30_17-07-50
++ python ./tools/test_net.py --device gpu --device_id 0 --weights data/pretrain_model/VGG_imagenet.npy --imdb kitti_train --cfg experiments/cfgs/faster_rcnn_end2end.yml --network MV3D_test
+Xlib:  extension "XInputExtension" missing on display ":1.0".
+Called with args:
+Namespace(cfg_file='experiments/cfgs/faster_rcnn_end2end.yml', comp_mode=False, device='gpu', device_id=0, imdb_name='kitti_train', model='data/pretrain_model/VGG_imagenet.npy', network_name='MV3D_test', prototxt=None, wait=True)
+Using config:
+{'DATA_DIR': '/data/RPN/MV3D_TF/data',
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXP_DIR': 'faster_rcnn_end2end',
+ 'IS_MULTISCALE': False,
+ 'MATLAB': 'matlab',
+ 'MODELS_DIR': '/data/RPN/MV3D_TF/models/pascal_voc',
+ 'PIXEL_MEANS': array([[[ 95.8814,  98.7743,  93.8549]]]),
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/data/RPN/MV3D_TF',
+ 'TEST': {'BBOX_REG': True,
+          'DEBUG_TIMELINE': False,
+          'HAS_RPN': True,
+          'MAX_SIZE': 2000,
+          'NMS': 0.1,
+          'PROPOSAL_METHOD': 'selective_search',
+          'RPN_MIN_SIZE': 5,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 300,
+          'RPN_PRE_NMS_TOP_N': 6000,
+          'SCALES': [600],
+          'SVM': False},
+ 'TRAIN': {'ASPECT_GROUPING': True,
+           'BATCH_SIZE': 128,
+           'BBOX_INSIDE_WEIGHTS': [1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0],
+           'BBOX_NORMALIZE_MEANS': [0.0, 0.0, 0.0, 0.0],
+           'BBOX_NORMALIZE_STDS': [0.1, 0.1, 0.2, 0.2],
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': True,
+           'BBOX_REG': True,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'DEBUG_TIMELINE': False,
+           'DISPLAY': 10,
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.7,
+           'GAMMA': 0.1,
+           'HAS_RPN': True,
+           'IMS_PER_BATCH': 1,
+           'LEARNING_RATE': 0.001,
+           'MAX_SIZE': 2000,
+           'MOMENTUM': 0.9,
+           'PROPOSAL_METHOD': 'gt',
+           'RPN_BATCHSIZE': 128,
+           'RPN_BBOX_INSIDE_WEIGHTS': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+           'RPN_CLOBBER_POSITIVES': False,
+           'RPN_FG_FRACTION': 0.25,
+           'RPN_MIN_SIZE': 5,
+           'RPN_NEGATIVE_OVERLAP': 0.5,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POSITIVE_WEIGHT': -1.0,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 12000,
+           'SCALES': [600],
+           'SNAPSHOT_INFIX': '',
+           'SNAPSHOT_ITERS': 5000,
+           'SNAPSHOT_PREFIX': 'VGGnet_fast_rcnn',
+           'STEPSIZE': 50000,
+           'USE_FLIPPED': False,
+           'USE_PREFETCH': False,
+           'WEIGHT_DECAY': 0.0005},
+ 'USE_GPU_NMS': False}
+<bound method kitti_mv3d.default_roidb of <datasets.kitti_mv3d.kitti_mv3d object at 0x7f177ca68f50>>
+image sets length:  3712
+/gpu:0
+Tensor("Placeholder:0", shape=(?, ?, ?, 9), dtype=float32)
+Tensor("Placeholder_1:0", shape=(?, ?, ?, 3), dtype=float32)
+Tensor("conv5_3/conv5_3:0", shape=(?, ?, ?, 512), dtype=float32)
+Tensor("rpn_conv/3x3/rpn_conv/3x3:0", shape=(?, ?, ?, 512), dtype=float32)
+Tensor("rpn_cls_score/rpn_cls_score:0", shape=(?, ?, ?, 8), dtype=float32)
+Tensor("rpn_cls_prob:0", shape=(?, ?, ?, ?), dtype=float32)
+Tensor("Reshape_2:0", shape=(?, ?, ?, 8), dtype=float32)
+Tensor("rpn_bbox_pred/rpn_bbox_pred:0", shape=(?, ?, ?, 24), dtype=float32)
+Tensor("Placeholder_2:0", shape=(?, 3), dtype=float32)
+Tensor("Placeholder_7:0", shape=(?, 12), dtype=float32)
+(<tf.Tensor 'rois/rpn_rois_bv:0' shape=(?, 5) dtype=float32>, <tf.Tensor 'rois/rpn_rois_img:0' shape=(?, 5) dtype=float32>, <tf.Tensor 'rois/rpn_rois_3d:0' shape=(?, 7) dtype=float32>, <tf.Tensor 'rois/rpn_rois_3d:0' shape=(?, 7) dtype=float32>)
+(<tf.Tensor 'rois/rpn_rois_bv:0' shape=(?, 5) dtype=float32>, <tf.Tensor 'rois/rpn_rois_img:0' shape=(?, 5) dtype=float32>, <tf.Tensor 'rois/rpn_rois_3d:0' shape=(?, 7) dtype=float32>, <tf.Tensor 'rois/rpn_rois_3d:0' shape=(?, 7) dtype=float32>)
+Tensor("conv5_3/conv5_3:0", shape=(?, ?, ?, 512), dtype=float32)
+Tensor("rois/rpn_rois_bv:0", shape=(?, 5), dtype=float32)
+[<tf.Tensor 'conv5_3/conv5_3:0' shape=(?, ?, ?, 512) dtype=float32>, <tf.Tensor 'rois/rpn_rois_bv:0' shape=(?, 5) dtype=float32>]
+Tensor("conv5_3_2/conv5_3_2:0", shape=(?, ?, ?, 512), dtype=float32)
+Tensor("rois/rpn_rois_img:0", shape=(?, 5), dtype=float32)
+[<tf.Tensor 'conv5_3_2/conv5_3_2:0' shape=(?, ?, ?, 512) dtype=float32>, <tf.Tensor 'rois/rpn_rois_img:0' shape=(?, 5) dtype=float32>]
+Tensor("fc7_1/fc7_1:0", shape=(?, 2048), dtype=float32)
+Tensor("fc7_2/fc7_2:0", shape=(?, 2048), dtype=float32)
+Tensor("fc7_1/fc7_1:0", shape=(?, 2048), dtype=float32)
+Tensor("fc7_2/fc7_2:0", shape=(?, 2048), dtype=float32)
+Use network `MV3D_test` in training
+==================
+data/pretrain_model/VGG_imagene
+2017-06-30 17:07:53.160492: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-30 17:07:53.160507: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-30 17:07:53.160511: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-30 17:07:53.160515: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-30 17:07:53.160530: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-06-30 17:07:53.619889: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
+name: TITAN X (Pascal)
+major: 6 minor: 1 memoryClockRate (GHz) 1.531
+pciBusID 0000:0a:00.0
+Total memory: 11.90GiB
+Free memory: 11.75GiB
+2017-06-30 17:07:53.868410: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x65a2120 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2017-06-30 17:07:53.869527: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 1 with properties: 
+name: TITAN X (Pascal)
+major: 6 minor: 1 memoryClockRate (GHz) 1.531
+pciBusID 0000:09:00.0
+Total memory: 11.90GiB
+Free memory: 11.75GiB
+2017-06-30 17:07:54.122694: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x65a5f80 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2017-06-30 17:07:54.123781: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 2 with properties: 
+name: TITAN X (Pascal)
+major: 6 minor: 1 memoryClockRate (GHz) 1.531
+pciBusID 0000:06:00.0
+Total memory: 11.90GiB
+Free memory: 11.75GiB
+2017-06-30 17:07:54.364335: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x65ca7b0 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2017-06-30 17:07:54.365370: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 3 with properties: 
+name: TITAN X (Pascal)
+major: 6 minor: 1 memoryClockRate (GHz) 1.531
+pciBusID 0000:05:00.0
+Total memory: 11.90GiB
+Free memory: 11.47GiB
+2017-06-30 17:07:54.371201: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 1 2 3 
+2017-06-30 17:07:54.371212: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y Y Y Y 
+2017-06-30 17:07:54.371215: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 1:   Y Y Y Y 
+2017-06-30 17:07:54.371218: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 2:   Y Y Y Y 
+2017-06-30 17:07:54.371220: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 3:   Y Y Y Y 
+2017-06-30 17:07:54.371226: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: TITAN X (Pascal), pci bus id: 0000:0a:00.0)
+2017-06-30 17:07:54.371230: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:1) -> (device: 1, name: TITAN X (Pascal), pci bus id: 0000:09:00.0)
+2017-06-30 17:07:54.371233: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:2) -> (device: 2, name: TITAN X (Pascal), pci bus id: 0000:06:00.0)
+2017-06-30 17:07:54.371235: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:3) -> (device: 3, name: TITAN X (Pascal), pci bus id: 0000:05:00.0)
+assign pretrain model weights to conv5_1
+assign pretrain model biases to conv5_1
+ignore fc6
+ignore fc6
+assign pretrain model weights to conv5_3
+assign pretrain model biases to conv5_3
+ignore fc7
+ignore fc7
+ignore fc8
+ignore fc8
+assign pretrain model weights to conv5_2
+assign pretrain model biases to conv5_2
+assign pretrain model weights to conv4_1
+assign pretrain model biases to conv4_1
+assign pretrain model weights to conv4_2
+assign pretrain model biases to conv4_2
+assign pretrain model weights to conv4_3
+assign pretrain model biases to conv4_3
+assign pretrain model weights to conv3_3
+assign pretrain model biases to conv3_3
+assign pretrain model weights to conv3_2
+assign pretrain model biases to conv3_2
+assign pretrain model weights to conv3_1
+assign pretrain model biases to conv3_1
+ignore conv1_1
+assign pretrain model biases to conv1_1
+assign pretrain model weights to conv1_2
+assign pretrain model biases to conv1_2
+assign pretrain model weights to conv2_2
+assign pretrain model biases to conv2_2
+assign pretrain model weights to conv2_1
+assign pretrain model biases to conv2_1
+Loading model weights from data/pretrain_model/VGG_imagenet.npy
+Inference:  /data/RPN/MV3D_TF/tools/../lib/datasets/../../data/KITTI/object/training/lidar_bv/000000.npy
+2017-06-30 17:07:57.386283: W tensorflow/core/framework/op_kernel.cc:1158] Failed precondition: Attempting to use uninitialized value fc6_2/weights
+	 [[Node: fc6_2/weights/read = Identity[T=DT_FLOAT, _class=["loc:@fc6_2/weights"], _device="/job:localhost/replica:0/task:0/gpu:0"](fc6_2/weights)]]
+2017-06-30 17:07:57.386292: W tensorflow/core/framework/op_kernel.cc:1158] Failed precondition: Attempting to use uninitialized value fc6_2/weights
+	 [[Node: fc6_2/weights/read = Identity[T=DT_FLOAT, _class=["loc:@fc6_2/weights"], _device="/job:localhost/replica:0/task:0/gpu:0"](fc6_2/weights)]]
+Traceback (most recent call last):
+  File "./tools/test_net.py", line 107, in <module>
+    test_net(sess, network, imdb, weights_filename)
+  File "/data/RPN/MV3D_TF/tools/../lib/fast_rcnn/test_mv.py", line 410, in test_net
+    scores, boxes_bv, boxes_cnr, boxes_cnr_r = box_detect(sess, net, im, bv, calib,  box_proposals)
+  File "/data/RPN/MV3D_TF/tools/../lib/fast_rcnn/test_mv.py", line 197, in box_detect
+    feed_dict=feed_dict)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 789, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 997, in _run
+    feed_dict_string, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1132, in _do_run
+    target_list, options, run_metadata)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 1152, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.FailedPreconditionError: Attempting to use uninitialized value fc6_2/weights
+	 [[Node: fc6_2/weights/read = Identity[T=DT_FLOAT, _class=["loc:@fc6_2/weights"], _device="/job:localhost/replica:0/task:0/gpu:0"](fc6_2/weights)]]
+	 [[Node: rois/rpn_rois_img/_81 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_475_rois/rpn_rois_img", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+
+Caused by op u'fc6_2/weights/read', defined at:
+  File "./tools/test_net.py", line 82, in <module>
+    network = get_network(args.network_name)
+  File "/data/RPN/MV3D_TF/tools/../lib/networks/factory.py", line 29, in get_network
+    return MV3D_test()
+  File "/data/RPN/MV3D_TF/tools/../lib/networks/MV3D_test.py", line 29, in __init__
+    self.setup()
+  File "/data/RPN/MV3D_TF/tools/../lib/networks/MV3D_test.py", line 112, in setup
+    .fc(2048, name='fc6_2')
+  File "/data/RPN/MV3D_TF/tools/../lib/networks/network.py", line 26, in layer_decorated
+    layer_output = op(self, layer_input, *args, **kwargs)
+  File "/data/RPN/MV3D_TF/tools/../lib/networks/network.py", line 392, in fc
+    weights = self.make_var('weights', [dim, num_out], init_weights, trainable, regularizer=self.l2_regularizer(cfg.TRAIN.WEIGHT_DECAY))
+  File "/data/RPN/MV3D_TF/tools/../lib/networks/network.py", line 93, in make_var
+    return tf.get_variable(name, shape, initializer=initializer, trainable=trainable, regularizer=regularizer)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 1065, in get_variable
+    use_resource=use_resource, custom_getter=custom_getter)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 962, in get_variable
+    use_resource=use_resource, custom_getter=custom_getter)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 367, in get_variable
+    validate_shape=validate_shape, use_resource=use_resource)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 352, in _true_getter
+    use_resource=use_resource)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variable_scope.py", line 725, in _get_single_variable
+    validate_shape=validate_shape)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variables.py", line 200, in __init__
+    expected_shape=expected_shape)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/variables.py", line 319, in _init_from_args
+    self._snapshot = array_ops.identity(self._variable, name="read")
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/ops/gen_array_ops.py", line 1303, in identity
+    result = _op_def_lib.apply_op("Identity", input=input, name=name)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/op_def_library.py", line 767, in apply_op
+    op_def=op_def)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py", line 2506, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py", line 1269, in __init__
+    self._traceback = _extract_stack()
+
+FailedPreconditionError (see above for traceback): Attempting to use uninitialized value fc6_2/weights
+	 [[Node: fc6_2/weights/read = Identity[T=DT_FLOAT, _class=["loc:@fc6_2/weights"], _device="/job:localhost/replica:0/task:0/gpu:0"](fc6_2/weights)]]
+	 [[Node: rois/rpn_rois_img/_81 = _Recv[client_terminated=false, recv_device="/job:localhost/replica:0/task:0/cpu:0", send_device="/job:localhost/replica:0/task:0/gpu:0", send_device_incarnation=1, tensor_name="edge_475_rois/rpn_rois_img", tensor_type=DT_FLOAT, _device="/job:localhost/replica:0/task:0/cpu:0"]()]]
+

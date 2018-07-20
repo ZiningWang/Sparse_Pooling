@@ -1,0 +1,7 @@
+output/default/
+data/pretrain_model/
+
+.pkl
+.zip
+.ipynb_checkpoints
+.pyc

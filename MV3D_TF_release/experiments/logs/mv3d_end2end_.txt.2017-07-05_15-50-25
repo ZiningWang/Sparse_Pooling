@@ -1,0 +1,181 @@
++ echo Logging output to experiments/logs/mv3d_end2end_.txt.2017-07-05_15-50-25
+Logging output to experiments/logs/mv3d_end2end_.txt.2017-07-05_15-50-25
++ python ./tools/test_net.py --device gpu --device_id 0 --weights output/faster_rcnn_end2end/train/VGGnet_fast_rcnn_iter_50000.ckpt.meta --imdb kitti_val --cfg experiments/cfgs/faster_rcnn_end2end.yml --network MV3D_test
+Xlib:  extension "XInputExtension" missing on display ":1.0".
+Called with args:
+Namespace(cfg_file='experiments/cfgs/faster_rcnn_end2end.yml', comp_mode=False, device='gpu', device_id=0, imdb_name='kitti_val', model='output/faster_rcnn_end2end/train/VGGnet_fast_rcnn_iter_50000.ckpt.meta', network_name='MV3D_test', prototxt=None, wait=True)
+Using config:
+{'DATA_DIR': '/data/RPN/MV3D_TF/data',
+ 'DEDUP_BOXES': 0.0625,
+ 'EPS': 1e-14,
+ 'EXP_DIR': 'faster_rcnn_end2end',
+ 'GPU_ID': 0,
+ 'IS_MULTISCALE': False,
+ 'MATLAB': 'matlab',
+ 'MODELS_DIR': '/data/RPN/MV3D_TF/models/pascal_voc',
+ 'PIXEL_MEANS': array([[[ 95.8814,  98.7743,  93.8549]]]),
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/data/RPN/MV3D_TF',
+ 'TEST': {'BBOX_REG': True,
+          'DEBUG_TIMELINE': False,
+          'HAS_RPN': True,
+          'MAX_SIZE': 2000,
+          'NMS': 0.1,
+          'PROPOSAL_METHOD': 'selective_search',
+          'RPN_MIN_SIZE': 5,
+          'RPN_NMS_THRESH': 0.7,
+          'RPN_POST_NMS_TOP_N': 300,
+          'RPN_PRE_NMS_TOP_N': 6000,
+          'SCALES': [600],
+          'SVM': False},
+ 'TRAIN': {'ASPECT_GROUPING': True,
+           'BATCH_SIZE': 128,
+           'BBOX_INSIDE_WEIGHTS': [1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0,
+                                   1.0],
+           'BBOX_NORMALIZE_MEANS': [0.0, 0.0, 0.0, 0.0],
+           'BBOX_NORMALIZE_STDS': [0.1, 0.1, 0.2, 0.2],
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': True,
+           'BBOX_REG': True,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'DEBUG_TIMELINE': False,
+           'DISPLAY': 10,
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.7,
+           'GAMMA': 0.1,
+           'HAS_RPN': True,
+           'IMS_PER_BATCH': 1,
+           'LEARNING_RATE': 0.001,
+           'MAX_SIZE': 2000,
+           'MOMENTUM': 0.9,
+           'PROPOSAL_METHOD': 'gt',
+           'RPN_BATCHSIZE': 128,
+           'RPN_BBOX_INSIDE_WEIGHTS': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+           'RPN_CLOBBER_POSITIVES': False,
+           'RPN_FG_FRACTION': 0.25,
+           'RPN_MIN_SIZE': 5,
+           'RPN_NEGATIVE_OVERLAP': 0.5,
+           'RPN_NMS_THRESH': 0.7,
+           'RPN_POSITIVE_OVERLAP': 0.7,
+           'RPN_POSITIVE_WEIGHT': -1.0,
+           'RPN_POST_NMS_TOP_N': 2000,
+           'RPN_PRE_NMS_TOP_N': 12000,
+           'SCALES': [600],
+           'SNAPSHOT_INFIX': '',
+           'SNAPSHOT_ITERS': 5000,
+           'SNAPSHOT_PREFIX': 'VGGnet_fast_rcnn',
+           'STEPSIZE': 50000,
+           'USE_FLIPPED': False,
+           'USE_PREFETCH': False,
+           'WEIGHT_DECAY': 0.0005},
+ 'USE_GPU_NMS': True}
+<bound method kitti_mv3d.default_roidb of <datasets.kitti_mv3d.kitti_mv3d object at 0x7f12a8534c10>>
+image sets length:  3769
+/gpu:0
+Tensor("Placeholder:0", shape=(?, ?, ?, 9), dtype=float32)
+Tensor("Placeholder_1:0", shape=(?, ?, ?, 3), dtype=float32)
+Tensor("conv5_3/conv5_3:0", shape=(?, ?, ?, 512), dtype=float32)
+Tensor("rpn_conv/3x3/rpn_conv/3x3:0", shape=(?, ?, ?, 512), dtype=float32)
+Tensor("rpn_cls_score/rpn_cls_score:0", shape=(?, ?, ?, 8), dtype=float32)
+Tensor("rpn_cls_prob:0", shape=(?, ?, ?, ?), dtype=float32)
+Tensor("Reshape_2:0", shape=(?, ?, ?, 8), dtype=float32)
+Tensor("rpn_bbox_pred/rpn_bbox_pred:0", shape=(?, ?, ?, 24), dtype=float32)
+Tensor("Placeholder_2:0", shape=(?, 3), dtype=float32)
+Tensor("Placeholder_7:0", shape=(?, 12), dtype=float32)
+(<tf.Tensor 'rois/rpn_rois_bv:0' shape=(?, 5) dtype=float32>, <tf.Tensor 'rois/rpn_rois_img:0' shape=(?, 5) dtype=float32>, <tf.Tensor 'rois/rpn_rois_3d:0' shape=(?, 7) dtype=float32>, <tf.Tensor 'rois/rpn_rois_3d:0' shape=(?, 7) dtype=float32>)
+(<tf.Tensor 'rois/rpn_rois_bv:0' shape=(?, 5) dtype=float32>, <tf.Tensor 'rois/rpn_rois_img:0' shape=(?, 5) dtype=float32>, <tf.Tensor 'rois/rpn_rois_3d:0' shape=(?, 7) dtype=float32>, <tf.Tensor 'rois/rpn_rois_3d:0' shape=(?, 7) dtype=float32>)
+Tensor("conv5_3/conv5_3:0", shape=(?, ?, ?, 512), dtype=float32)
+Tensor("rois/rpn_rois_bv:0", shape=(?, 5), dtype=float32)
+[<tf.Tensor 'conv5_3/conv5_3:0' shape=(?, ?, ?, 512) dtype=float32>, <tf.Tensor 'rois/rpn_rois_bv:0' shape=(?, 5) dtype=float32>]
+Tensor("conv5_3_2/conv5_3_2:0", shape=(?, ?, ?, 512), dtype=float32)
+Tensor("rois/rpn_rois_img:0", shape=(?, 5), dtype=float32)
+[<tf.Tensor 'conv5_3_2/conv5_3_2:0' shape=(?, ?, ?, 512) dtype=float32>, <tf.Tensor 'rois/rpn_rois_img:0' shape=(?, 5) dtype=float32>]
+Tensor("fc7_1/fc7_1:0", shape=(?, 2048), dtype=float32)
+Tensor("fc7_2/fc7_2:0", shape=(?, 2048), dtype=float32)
+Tensor("fc7_1/fc7_1:0", shape=(?, 2048), dtype=float32)
+Tensor("fc7_2/fc7_2:0", shape=(?, 2048), dtype=float32)
+Use network `MV3D_test` in training
+==================
+output/faster_rcnn_end2end/train/VGGnet_fast_rcnn_iter_50000.ckpt
+2017-07-05 15:50:28.751410: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 15:50:28.751424: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 15:50:28.751428: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 15:50:28.751432: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 15:50:28.751436: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-07-05 15:50:29.154855: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties: 
+name: TITAN X (Pascal)
+major: 6 minor: 1 memoryClockRate (GHz) 1.531
+pciBusID 0000:0a:00.0
+Total memory: 11.90GiB
+Free memory: 11.75GiB
+2017-07-05 15:50:29.398543: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x50221e0 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2017-07-05 15:50:29.399643: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 1 with properties: 
+name: TITAN X (Pascal)
+major: 6 minor: 1 memoryClockRate (GHz) 1.531
+pciBusID 0000:09:00.0
+Total memory: 11.90GiB
+Free memory: 11.75GiB
+2017-07-05 15:50:29.653060: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x5025fd0 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2017-07-05 15:50:29.654221: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 2 with properties: 
+name: TITAN X (Pascal)
+major: 6 minor: 1 memoryClockRate (GHz) 1.531
+pciBusID 0000:06:00.0
+Total memory: 11.90GiB
+Free memory: 11.75GiB
+2017-07-05 15:50:29.881230: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x5029df0 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2017-07-05 15:50:29.882300: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 3 with properties: 
+name: TITAN X (Pascal)
+major: 6 minor: 1 memoryClockRate (GHz) 1.531
+pciBusID 0000:05:00.0
+Total memory: 11.90GiB
+Free memory: 11.42GiB
+2017-07-05 15:50:29.888282: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0 1 2 3 
+2017-07-05 15:50:29.888294: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y Y Y Y 
+2017-07-05 15:50:29.888297: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 1:   Y Y Y Y 
+2017-07-05 15:50:29.888300: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 2:   Y Y Y Y 
+2017-07-05 15:50:29.888302: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 3:   Y Y Y Y 
+2017-07-05 15:50:29.888310: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: TITAN X (Pascal), pci bus id: 0000:0a:00.0)
+2017-07-05 15:50:29.888314: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:1) -> (device: 1, name: TITAN X (Pascal), pci bus id: 0000:09:00.0)
+2017-07-05 15:50:29.888317: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:2) -> (device: 2, name: TITAN X (Pascal), pci bus id: 0000:06:00.0)
+2017-07-05 15:50:29.888320: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:3) -> (device: 3, name: TITAN X (Pascal), pci bus id: 0000:05:00.0)
+========================
+Loading model weights from output/faster_rcnn_end2end/train/VGGnet_fast_rcnn_iter_50000.ckpt.meta
+Inference:  /data/RPN/MV3D_TF/tools/../lib/datasets/../../data/KITTI/object/training/lidar_bv/000001.npy
+(1, 25)
+/data/RPN/MV3D_TF/tools/../lib/datasets/../../data/KITTI/object/training/velodyne/000000.bin
+[[[ 58.8274231   17.15912247  -1.19814086]
+  [ 58.82715607  17.15774155  -1.19702673]
+  [ 58.96638107  17.1373806   -1.15821445]
+  [ 58.96727371  17.14144897  -1.15935898]
+  [ 58.81568146  17.15835953   0.2527324 ]
+  [ 58.81527328  17.15750122   0.2538529 ]
+  [ 58.95562744  17.13640404   0.29274854]
+  [ 58.95478821  17.14056969   0.29162171]]]
+ERROR: In /build/buildd/vtk-5.8.0/Rendering/vtkXOpenGLRenderWindow.cxx, line 611
+vtkXOpenGLRenderWindow (0xada2510): GLX not found.  Aborting.
+
+./experiments/scripts/mv3d_test.sh: line 37: 16822 Aborted                 (core dumped) python ./tools/test_net.py --device ${DEV} --device_id ${DEV_ID} --weights ${WEIGHTS} --imdb ${DATASET} --cfg experiments/cfgs/faster_rcnn_end2end.yml --network MV3D_test ${EXTRA_ARGS}
