@@ -1,0 +1,14 @@
+120000
+  done.
+pedestrian_detection AP: 59.373753 57.914467 51.504272
+pedestrian_orientation AP: 46.800331 45.445747 40.034821
+cyclist_detection AP: 59.473442 34.013844 33.760044
+cyclist_orientation AP: 59.342567 33.959694 33.643387
+pedestrian_detection_BEV AP: 55.217979 49.164448 47.378242
+pedestrian_heading_BEV AP: 43.862389 39.458496 37.065025
+cyclist_detection_BEV AP: 58.383266 33.390556 32.724266
+cyclist_heading_BEV AP: 58.273037 33.339718 32.619965
+pedestrian_detection_3D AP: 51.011562 45.540276 40.074493
+pedestrian_heading_3D AP: 41.169712 37.107937 32.291752
+cyclist_detection_3D AP: 49.985172 32.178749 31.087435
+cyclist_heading_3D AP: 49.930885 32.071182 30.994017

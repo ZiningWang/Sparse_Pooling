@@ -3,6 +3,9 @@ avod/data
 avod/checkpoints
 avod/logs
 
+#execution
+.so
+
 # Python
 *.pyc
 __pycache__

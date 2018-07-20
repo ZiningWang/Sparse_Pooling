@@ -1,0 +1,235 @@
+25000
+  done.
+pedestrian_detection AP: 49.124985 47.981178 43.262543
+pedestrian_detection_BEV AP: 53.151756 53.232647 48.612671
+pedestrian_heading_BEV AP: 31.203545 30.780518 27.547825
+pedestrian_detection_3D AP: 53.115742 53.038113 48.404236
+pedestrian_heading_3D AP: 31.185028 30.692123 27.442348
+30000
+  done.
+pedestrian_detection AP: 54.543739 52.798740 50.217392
+cyclist_detection AP: 3.030303 4.545455 4.545455
+pedestrian_detection_BEV AP: 58.193325 58.541744 52.990711
+pedestrian_heading_BEV AP: 40.231659 39.798573 35.773251
+cyclist_detection_BEV AP: 3.030303 4.545455 4.545455
+cyclist_heading_BEV AP: 2.858383 2.292074 2.292074
+pedestrian_detection_3D AP: 58.162003 58.244705 52.799488
+pedestrian_heading_3D AP: 40.212692 39.641521 35.685776
+cyclist_detection_3D AP: 3.030303 4.545455 4.545455
+cyclist_heading_3D AP: 2.858383 2.292074 2.292074
+35000
+  done.
+pedestrian_detection AP: 58.647274 55.318176 53.281574
+cyclist_detection AP: 9.090909 9.090909 9.090909
+pedestrian_detection_BEV AP: 60.765160 60.101032 54.557873
+pedestrian_heading_BEV AP: 41.450356 40.073795 36.142605
+cyclist_detection_BEV AP: 9.090909 9.090909 9.090909
+cyclist_heading_BEV AP: 8.753035 8.753035 8.753035
+pedestrian_detection_3D AP: 60.651249 59.894379 54.347401
+pedestrian_heading_3D AP: 41.391575 39.941551 36.015884
+cyclist_detection_3D AP: 9.090909 9.090909 9.090909
+cyclist_heading_3D AP: 8.753035 8.753035 8.753035
+40000
+  done.
+pedestrian_detection AP: 60.474594 59.924610 54.447586
+cyclist_detection AP: 9.090909 9.090909 9.090909
+pedestrian_detection_BEV AP: 65.481850 62.665413 59.600838
+pedestrian_heading_BEV AP: 44.419277 42.085629 39.548512
+cyclist_detection_BEV AP: 9.090909 9.090909 9.090909
+cyclist_heading_BEV AP: 8.692143 8.692143 8.692143
+pedestrian_detection_3D AP: 65.296516 61.935963 56.235962
+pedestrian_heading_3D AP: 44.308109 41.663952 37.674129
+cyclist_detection_3D AP: 9.090909 9.090909 9.090909
+cyclist_heading_3D AP: 8.692143 8.692143 8.692143
+45000
+  done.
+pedestrian_detection AP: 60.241432 59.270660 53.827286
+cyclist_detection AP: 9.090909 9.090909 9.090909
+pedestrian_detection_BEV AP: 65.291847 62.322945 56.200291
+pedestrian_heading_BEV AP: 46.376278 43.865009 39.167603
+cyclist_detection_BEV AP: 9.090909 9.090909 9.090909
+cyclist_heading_BEV AP: 9.029919 9.029919 9.029919
+pedestrian_detection_3D AP: 65.160133 61.845695 55.883884
+pedestrian_heading_3D AP: 46.295929 43.576340 38.989525
+cyclist_detection_3D AP: 9.090909 9.090909 9.090909
+cyclist_heading_3D AP: 9.029919 9.029919 9.029919
+50000
+  done.
+pedestrian_detection AP: 61.379654 56.531532 50.636715
+cyclist_detection AP: 15.970516 9.090909 9.090909
+pedestrian_detection_BEV AP: 62.913628 61.708027 55.584240
+pedestrian_heading_BEV AP: 47.355934 46.101780 40.987331
+cyclist_detection_BEV AP: 15.970516 9.090909 9.090909
+cyclist_heading_BEV AP: 15.672863 9.087274 9.087274
+pedestrian_detection_3D AP: 62.797779 61.546413 55.359425
+pedestrian_heading_3D AP: 47.274189 46.033962 40.875111
+cyclist_detection_3D AP: 15.970516 9.090909 9.090909
+cyclist_heading_3D AP: 15.672863 9.087274 9.087274
+55000
+  done.
+pedestrian_detection AP: 51.771664 51.762684 45.257923
+cyclist_detection AP: 26.469990 17.554859 17.622377
+pedestrian_detection_BEV AP: 58.400597 53.415203 46.520550
+pedestrian_heading_BEV AP: 43.084339 40.165539 34.731716
+cyclist_detection_BEV AP: 26.226112 17.411402 17.493113
+cyclist_heading_BEV AP: 26.069567 17.307264 17.391613
+pedestrian_detection_3D AP: 58.360950 53.344337 46.421005
+pedestrian_heading_3D AP: 43.059319 40.129280 34.686905
+cyclist_detection_3D AP: 26.226112 17.411402 17.493113
+cyclist_heading_3D AP: 26.069567 17.307264 17.391613
+60000
+  done.
+pedestrian_detection AP: 57.799263 54.367901 48.466270
+cyclist_detection AP: 31.471336 22.033792 17.493113
+pedestrian_detection_BEV AP: 61.160969 57.213314 54.702847
+pedestrian_heading_BEV AP: 46.511906 43.419495 40.707321
+cyclist_detection_BEV AP: 31.170151 21.509666 21.547937
+cyclist_heading_BEV AP: 30.746740 21.016834 21.055092
+pedestrian_detection_3D AP: 61.080830 57.049919 54.539307
+pedestrian_heading_3D AP: 46.469925 43.321136 40.619949
+cyclist_detection_3D AP: 31.138971 21.427395 17.245991
+cyclist_heading_3D AP: 30.716658 20.992788 17.049049
+65000
+  done.
+pedestrian_detection AP: 55.946201 55.540745 49.289318
+cyclist_detection AP: 33.160175 22.864332 22.835081
+pedestrian_detection_BEV AP: 63.016724 58.624279 51.585667
+pedestrian_heading_BEV AP: 47.913364 44.581585 38.846512
+cyclist_detection_BEV AP: 32.898338 22.412256 22.401270
+cyclist_heading_BEV AP: 32.631416 22.172388 22.163195
+pedestrian_detection_3D AP: 62.931633 58.499569 51.515556
+pedestrian_heading_3D AP: 47.869473 44.527527 38.815918
+cyclist_detection_3D AP: 32.898338 22.412256 22.401270
+cyclist_heading_3D AP: 32.631416 22.172388 22.163195
+70000
+  done.
+pedestrian_detection AP: 53.277409 53.014225 47.388042
+cyclist_detection AP: 34.913792 24.643316 24.722420
+pedestrian_detection_BEV AP: 60.151817 56.109409 54.468300
+pedestrian_heading_BEV AP: 45.301762 42.642078 40.215862
+cyclist_detection_BEV AP: 34.751457 24.196857 24.281525
+cyclist_heading_BEV AP: 34.395008 23.825644 23.915905
+pedestrian_detection_3D AP: 60.056274 55.964077 49.908058
+pedestrian_heading_3D AP: 45.239342 42.584332 37.388725
+cyclist_detection_3D AP: 34.751457 24.137049 24.222874
+cyclist_heading_3D AP: 34.395008 23.810133 23.900696
+75000
+  done.
+pedestrian_detection AP: 52.956646 48.629902 46.885773
+cyclist_detection AP: 42.005032 25.922077 25.574425
+pedestrian_detection_BEV AP: 61.178703 56.587643 50.238140
+pedestrian_heading_BEV AP: 44.813911 42.135258 37.250774
+cyclist_detection_BEV AP: 41.783096 25.432899 25.161289
+cyclist_heading_BEV AP: 41.543350 25.399935 24.969004
+pedestrian_detection_3D AP: 61.162533 56.551464 50.210346
+pedestrian_heading_3D AP: 44.804005 42.111210 37.231045
+cyclist_detection_3D AP: 41.783096 25.432899 25.161289
+cyclist_heading_3D AP: 41.543350 25.399935 24.969004
+80000
+  done.
+pedestrian_detection AP: 53.161804 48.403198 42.472542
+cyclist_detection AP: 42.668793 26.007732 25.610947
+pedestrian_detection_BEV AP: 56.330784 55.746937 49.654392
+pedestrian_heading_BEV AP: 42.162590 41.831276 36.802700
+cyclist_detection_BEV AP: 42.293243 25.598621 25.214756
+cyclist_heading_BEV AP: 42.018154 25.503700 24.999956
+pedestrian_detection_3D AP: 56.322426 55.724739 49.630592
+pedestrian_heading_3D AP: 42.157295 41.826981 36.794182
+cyclist_detection_3D AP: 42.293243 25.598621 25.214756
+cyclist_heading_3D AP: 42.018154 25.503700 24.999956
+85000
+  done.
+pedestrian_detection AP: 53.244316 48.332680 46.611671
+cyclist_detection AP: 40.177677 29.841805 29.349508
+pedestrian_detection_BEV AP: 59.263126 54.687023 48.957924
+pedestrian_heading_BEV AP: 45.002411 42.014484 37.391701
+cyclist_detection_BEV AP: 39.901714 29.148319 28.587774
+cyclist_heading_BEV AP: 39.765228 28.989529 28.421566
+pedestrian_detection_3D AP: 59.212376 54.579758 48.857105
+pedestrian_heading_3D AP: 44.964649 41.931179 37.308140
+cyclist_detection_3D AP: 39.901714 29.148319 28.587774
+cyclist_heading_3D AP: 39.765228 28.989529 28.421566
+90000
+  done.
+pedestrian_detection AP: 51.068996 50.157417 43.963207
+cyclist_detection AP: 48.938511 31.954298 31.646681
+pedestrian_detection_BEV AP: 58.788944 52.845573 45.788433
+pedestrian_heading_BEV AP: 44.419064 41.004025 35.484428
+cyclist_detection_BEV AP: 48.180096 31.184956 30.987307
+cyclist_heading_BEV AP: 47.739918 30.951218 30.705240
+pedestrian_detection_3D AP: 58.773750 52.813808 45.768837
+pedestrian_heading_3D AP: 44.409248 40.990040 35.476402
+cyclist_detection_3D AP: 48.180096 31.184956 30.987307
+cyclist_heading_3D AP: 47.739918 30.951218 30.705240
+95000
+  done.
+pedestrian_detection AP: 55.502277 50.475304 43.946205
+cyclist_detection AP: 58.028568 33.775253 32.757946
+pedestrian_detection_BEV AP: 58.305367 52.836918 45.732643
+pedestrian_heading_BEV AP: 44.462872 41.510162 35.736450
+cyclist_detection_BEV AP: 57.077038 32.973526 32.099567
+cyclist_heading_BEV AP: 56.587048 32.802658 31.779659
+pedestrian_detection_3D AP: 58.273445 52.804249 45.716839
+pedestrian_heading_3D AP: 44.441517 41.487865 35.726624
+cyclist_detection_3D AP: 57.077038 32.973526 32.099567
+cyclist_heading_3D AP: 56.587048 32.802658 31.779659
+100000
+  done.
+pedestrian_detection AP: 47.876896 42.613800 41.106323
+cyclist_detection AP: 59.149395 40.429142 34.196690
+pedestrian_detection_BEV AP: 56.253601 50.642586 44.305386
+pedestrian_heading_BEV AP: 42.755882 39.306416 34.316505
+cyclist_detection_BEV AP: 58.642982 39.535351 33.647133
+cyclist_heading_BEV AP: 57.957901 39.026165 33.334305
+pedestrian_detection_3D AP: 56.222446 50.591637 44.290291
+pedestrian_heading_3D AP: 42.736557 39.273674 34.302883
+cyclist_detection_3D AP: 58.642982 39.535351 33.647133
+cyclist_heading_3D AP: 57.957901 39.026165 33.334305
+105000
+  done.
+pedestrian_detection AP: 52.723305 45.815582 39.006645
+cyclist_detection AP: 58.521408 34.141483 33.852974
+pedestrian_detection_BEV AP: 60.696499 53.820717 46.464050
+pedestrian_heading_BEV AP: 46.324028 41.618511 35.466095
+cyclist_detection_BEV AP: 57.827221 33.492107 33.189445
+cyclist_heading_BEV AP: 57.478313 33.361782 32.886841
+pedestrian_detection_3D AP: 60.687065 53.808689 46.447582
+pedestrian_heading_3D AP: 46.317963 41.616135 35.456463
+cyclist_detection_3D AP: 57.827221 33.492107 33.189445
+cyclist_heading_3D AP: 57.478313 33.361782 32.886841
+110000
+  done.
+pedestrian_detection AP: 50.288754 49.386806 42.891693
+cyclist_detection AP: 60.230343 40.877533 34.210800
+pedestrian_detection_BEV AP: 57.851738 51.688663 44.880913
+pedestrian_heading_BEV AP: 43.303551 39.069290 33.923634
+cyclist_detection_BEV AP: 59.651680 39.927090 33.623318
+cyclist_heading_BEV AP: 59.249657 39.593311 33.439209
+pedestrian_detection_3D AP: 57.807022 51.604916 44.784782
+pedestrian_heading_3D AP: 43.276321 39.029667 33.868309
+cyclist_detection_3D AP: 59.651680 39.927090 33.623318
+cyclist_heading_3D AP: 59.249657 39.593311 33.439209
+115000
+  done.
+pedestrian_detection AP: 51.121948 44.942169 43.898163
+cyclist_detection AP: 59.363674 34.230633 33.980152
+pedestrian_detection_BEV AP: 58.757637 52.924530 45.975487
+pedestrian_heading_BEV AP: 44.600609 40.878838 35.392139
+cyclist_detection_BEV AP: 58.444859 33.514099 33.149860
+cyclist_heading_BEV AP: 58.209866 33.422516 33.004604
+pedestrian_detection_3D AP: 53.397377 52.883972 45.923866
+pedestrian_heading_3D AP: 41.130314 40.872566 35.371449
+cyclist_detection_3D AP: 58.444859 33.514099 33.149860
+cyclist_heading_3D AP: 58.209866 33.422516 33.004604
+120000
+  done.
+pedestrian_detection AP: 51.052505 45.294445 38.540428
+cyclist_detection AP: 59.611290 40.690235 34.415581
+pedestrian_detection_BEV AP: 53.661175 47.252399 46.008297
+pedestrian_heading_BEV AP: 41.561554 37.451351 35.699928
+cyclist_detection_BEV AP: 58.987785 39.634262 33.600883
+cyclist_heading_BEV AP: 58.351646 39.101875 33.310658
+pedestrian_detection_3D AP: 53.655487 47.222511 45.987938
+pedestrian_heading_3D AP: 41.557854 37.431870 35.688984
+cyclist_detection_3D AP: 58.987785 39.607910 33.600883
+cyclist_heading_3D AP: 58.351646 39.089584 33.310658
