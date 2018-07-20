@@ -18,18 +18,14 @@ This is an Tensorflow implementation of the fusion of VoxelNet and MSCNN, which 
 
 ### Installation 
 
-1. Clone the Faster R-CNN repository
-```Shell
-  git clone --recursive https://github.com/RyannnG/MV3D_TF.git
-```
 
-2. Build the Cython modules
+1. Build the Cython modules
    ```Shell
     cd $MV3D/lib
     make
    ```
 
-3. Downloads KITTI object datasets.
+2. Downloads KITTI object datasets.
 
 ```Shell
  % Specify KITTI data path so that the structure is like
@@ -45,7 +41,7 @@ This is an Tensorflow implementation of the fusion of VoxelNet and MSCNN, which 
 ```
 
 
-4. Preprocess Lidar data with Voxel representation
+3. Preprocess Lidar data with Voxel representation
   The lidar input representation is in Voxel which is totally different from that of MV3D. The preprocessing clips the Lidar data by the visible area of the camera and transform the point cloud into camera frame.
 
    ```shell
@@ -54,7 +50,7 @@ This is an Tensorflow implementation of the fusion of VoxelNet and MSCNN, which 
    python tools/preprocess.py
    ```
 
-5. Create symlinks for the KITTI dataset
+4. Create symlinks for the KITTI dataset
 
 ```Shell
    cd $MV3D/data/KITTI
