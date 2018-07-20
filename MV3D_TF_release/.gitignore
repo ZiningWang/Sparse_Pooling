@@ -1,6 +1,7 @@
 output/default/
 data/pretrain_model/
 kitti/results/
+tests/mscnn_ped_cyc_kitti_trainval_2nd_iter_15000.mat
 
 .pkl
 .zip
