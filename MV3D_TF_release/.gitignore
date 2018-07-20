@@ -1,5 +1,6 @@
 output/default/
 data/pretrain_model/
+kitti/results/
 
 .pkl
 .zip
