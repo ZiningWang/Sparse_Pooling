@@ -12,3 +12,5 @@ pedestrian_detection_3D AP: 50.475861 45.637627 39.938107
 pedestrian_heading_3D AP: 42.197701 38.060493 33.351360
 cyclist_detection_3D AP: 32.648178 22.730722 22.853928
 cyclist_heading_3D AP: 32.374847 22.418140 22.544670
+
+#Original avod-fpn

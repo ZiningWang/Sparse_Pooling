@@ -12,3 +12,5 @@ pedestrian_detection_3D AP: 55.670174 49.137192 42.557583
 pedestrian_heading_3D AP: 43.480713 38.559006 33.507988
 cyclist_detection_3D AP: 64.143974 39.494923 38.712933
 cyclist_heading_3D AP: 61.841839 38.076096 37.221874
+
+#Using Sparse Pooling after vgg (dual)

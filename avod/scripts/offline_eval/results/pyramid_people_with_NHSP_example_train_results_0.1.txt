@@ -12,3 +12,5 @@ pedestrian_detection_3D AP: 52.068840 46.446209 40.430294
 pedestrian_heading_3D AP: 43.141441 38.608150 33.654789
 cyclist_detection_3D AP: 63.021637 39.137497 37.709454
 cyclist_heading_3D AP: 62.569195 38.808929 37.311199
+
+#Using Sparse Pooling before rpn
