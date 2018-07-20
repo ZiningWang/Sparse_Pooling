@@ -166,8 +166,8 @@ The `ckpt_indices` here indicates the indices of the checkpoint in the list. If 
 All results should be saved in `avod/data/outputs`. Here you should see `proposals_and_scores` and `final_predictions_and_scores` results. To visualize these results, you can run `demos/show_predictions_2d.py`. The script needs to be configured to your specific experiments. The `scripts/offline_eval/plot_ap.py` will plot the AP vs. step, and print the 5 highest performing checkpoints for each evaluation metric at the moderate difficulty.
 
 ## GET KITTI RESULT
-To get the result for submission to KITTI, see scripts/offline_eval/save_kitti_predictions.py  
-To get AP on the validation set, see scripts/offline_eval/sample_command
+To get the result for submission to KITTI, see `scripts/offline_eval/save_kitti_predictions.py`
+To get AP on the validation set, see `scripts/offline_eval/sample_command`
 
 
 ## LICENSE
