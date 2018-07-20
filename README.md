@@ -10,6 +10,8 @@ Sparse Pooling is for fusing feature maps from different views and sources. Spar
 
 As the majority of the code comes from many existing repositories, including [MV3D_TF](https://github.com/leeyevi/MV3D_TF), [Avod-FPN](https://github.com/kujason/avod), [VoxelNet](https://github.com/jeasinema/VoxelNet-tensorflow) and [MSCNN](https://github.com/zhaoweicai/mscnn). If there is any thing inappropriate, please contact me through wangzining@berkeley.edu.
 
+Results will be updated.
+
 ## Usage
 The following two networks can be downloaded and run separately.
 
