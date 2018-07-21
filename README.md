@@ -39,6 +39,8 @@ The 'Non-homogeneous' term came from [Spatial Transformer Networks](https://gith
 
 
 ## LICENSE
+### BSD License – Berkeley
+
 Copyright (c) 2018 [Zining Wang](https://github.com/ZiningWang)
 
 All rights reserved.
