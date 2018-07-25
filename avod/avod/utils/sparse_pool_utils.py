@@ -74,6 +74,7 @@ def sparse_pool_layer(inputs,feature_depths, M, img_index_flip = None ,bv_index 
     #pdb.set_trace()
 
     if not (bv_index is None):
+        print('using dual sparse pooling')
         feature_depth_img = feature_depths[1]
         pooled_size = [1,tf.shape(input_img)[1],tf.shape(input_img)[2],feature_depth_img]
         bv_pooled = _sparse_pool_trans_op(M,input_bv,img_index_flip,pooled_size)

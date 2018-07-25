@@ -291,8 +291,14 @@ class RpnModel(model.DetectionModel):
         if self._config.rpn_config.rpn_sparse_pooling_after_vgg:
             self.M_tf_vgg = tf.SparseTensor(indices=self.placeholders[self.PL_M_IJ_VGG],values=self.placeholders[self.PL_M_VAL_VGG],
                           dense_shape=self.placeholders[self.PL_M_SIZE_VGG])
+            if self._config.rpn_config.rpn_dual_sparse_pooling_after_vgg:
+                bv_index_indicator = np.zeros((1,3))
+            else:
+                print('WZN: only pooling img to bev after vgg')
+                bv_index_indicator = None
             self._fusion_feature_extractor = FusionVggPyr(self._config.layers_config.bev_feature_extractor.bev_vgg_pyr,
-                    self._config.layers_config.img_feature_extractor.img_vgg_pyr,self.M_tf_vgg,img_index_flip=self.placeholders[self.PL_IMG_POOL_IJ_VGG],bv_index=None)
+                    self._config.layers_config.img_feature_extractor.img_vgg_pyr,self.M_tf_vgg,
+                    img_index_flip=self.placeholders[self.PL_IMG_POOL_IJ_VGG],bv_index=bv_index_indicator)
 
             self.bev_feature_maps, self.img_feature_maps, self.bev_end_points, self.img_end_points = \
                 self._fusion_feature_extractor.build(

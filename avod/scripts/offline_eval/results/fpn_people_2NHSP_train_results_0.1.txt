@@ -14,4 +14,4 @@ cyclist_detection_3D AP: 49.985172 32.178749 31.087435
 cyclist_heading_3D AP: 49.930885 32.071182 30.994017
 
 
-#Using Sparse Pooling after vgg (dual) and before rpn 
+#Using Sparse Pooling after vgg (single) and before rpn 

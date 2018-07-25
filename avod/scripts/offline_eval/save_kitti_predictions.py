@@ -20,7 +20,7 @@ def main():
     ##############################
     # Options
     ##############################
-    checkpoint_name = 'pyramid_people_with_2NHSP_example_train'#'fpn_people_dual_SHPL_train'#'pyramid_people_with_NHSP_example_train'#'pyramid_people_with_NHSP_example'
+    checkpoint_name = 'fpn_people_dual_NHSP_train'#'fpn_people_dual_SHPL_train'#'pyramid_people_with_NHSP_example_train'#'pyramid_people_with_NHSP_example'
 
     data_split = 'val'#'test'#'val'
 
@@ -273,7 +273,7 @@ def main():
         print('\nNum valid:', num_valid_samples)
         print('Num samples:', num_samples)
 
-        if data_split == 'val':
+        #if data_split == 'val':
             
 
 
