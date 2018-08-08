@@ -358,7 +358,7 @@ class RpnModel(model.DetectionModel):
             #self.bev_input_pooled, self.img_input_pooled = sparse_pool_layer([self._bev_preprocessed,self._img_preprocessed],[3,6], self.M_tf, 
             #               img_index_flip = self.placeholders[self.PL_IMG_POOL_IJ], bv_index = self.placeholders[self.PL_BEV_POOL_IJ], use_bn=use_bn, training=self._is_training)
         else:
-            print('WZN: Not using sparse pooling')
+            print('WZN: Not using sparse pooling right before rpn')
 
 
 

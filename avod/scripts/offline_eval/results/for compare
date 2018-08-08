@@ -1,0 +1,45 @@
+for compare:
+
+from repo:
+pedestrian_detection_BEV AP: 50.756699 44.662033 38.080215
+cyclist_detection_BEV AP: 58.948082 39.581566 33.600883
+pedestrian_detection_3D AP: 48.466549 42.949192 36.783772
+cyclist_detection_3D AP: 57.951611 39.007187 33.106602
+
+reproduced:
+pedestrian_detection_BEV AP: 45.871170 40.203671 34.751003
+cyclist_detection_BEV AP: 65.184059 40.134174 39.475777
+pedestrian_detection_3D AP: 43.879417 38.587250 33.443130
+cyclist_detection_3D AP: 56.809437 38.469608 38.109253
+
+reproduced with aug (ealier):
+pedestrian_detection_BEV AP: 52.719646 47.784889 41.741280
+cyclist_detection_BEV AP: 32.648178 22.798841 22.941177
+pedestrian_detection_3D AP: 50.475861 45.637627 39.938107
+cyclist_detection_3D AP: 32.648178 22.730722 22.853928
+
+
+NHSP:
+pedestrian_detection_BEV AP: 49.722446 43.697292 38.952702
+cyclist_detection_BEV AP: 62.172615 38.713882 37.384212
+pedestrian_detection_3D AP: 47.325134 41.471214 36.836723
+cyclist_detection_3D AP: 61.139385 37.647999 36.845718
+
+NHSP another (earlier):
+pedestrian_detection_BEV AP: 58.347584 52.134029 46.368744
+cyclist_detection_BEV AP: 64.357666 40.060089 38.773479
+pedestrian_detection_3D AP: 52.068840 46.446209 40.430294
+cyclist_detection_3D AP: 63.021637 39.137497 37.709454
+
+
+SHPL:
+pedestrian_detection_BEV AP: 52.606903 47.152130 41.475555
+cyclist_detection_BEV AP: 68.252632 42.457287 41.824917
+pedestrian_detection_3D AP: 46.241859 40.578270 39.568138
+cyclist_detection_3D AP: 65.429199 40.787231 40.149868
+
+dual SHPL:
+pedestrian_detection_BEV AP: 51.691826 46.673359 41.296589
+cyclist_detection_BEV AP: 67.258316 47.929459 41.607239
+pedestrian_detection_3D AP: 45.434715 44.846851 39.546463
+cyclist_detection_3D AP: 64.449982 41.055794 39.841713

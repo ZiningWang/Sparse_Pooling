@@ -20,9 +20,9 @@ def main():
     ##############################
     # Options
     ##############################
-    checkpoint_name = 'fpn_people_dual_NHSP_train'#'fpn_people_dual_SHPL_train'#'pyramid_people_with_NHSP_example_train'#'pyramid_people_with_NHSP_example'
+    checkpoint_name = 'fpn_people_SHPL'#'fpn_people_dual_SHPL_train'#'pyramid_people_with_NHSP_example_train'#'pyramid_people_with_NHSP_example'
 
-    data_split = 'val'#'test'#'val'
+    data_split = 'test'#'test'#'val'
 
     global_steps = None
     # global_steps = [28000, 19000, 33000, 34000]
