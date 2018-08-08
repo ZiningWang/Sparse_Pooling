@@ -19,8 +19,8 @@ This is the introduction of the extension of the published work [**Fusing Bird V
 
 The fusion happens at the middle-stage which is of the best performance according to the Kitti Benchmark on July 23, 2018. The middle-stage fusion propose to fuse features after the convolution and down-sampling operations of the raw data and before the region proposal network (RPN). The fusion keeps the training of the network end-to-end.
 <p align="center">
-	<img src="figures/middle-stage-fusion.png" width="640" title="middle-stage fusion">  
-	<b> middle-stage fusion </b><br>
+	<img src="figures/middle-stage-fusion.png" width="640" title="middle-stage fusion">  <br>
+	<b> middle-stage fusion </b>
 </p>
 The main contributions of the Sparse Non-homogeneous Pooling Layer (SHPL) are:  
 
