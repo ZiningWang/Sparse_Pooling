@@ -23,6 +23,8 @@ The fusion happens at the middle-stage which is of the best performance accordin
 	<em>middle-stage fusion</em>
 </p>
 The main contributions of the Sparse Non-homogeneous Pooling Layer (SHPL) are:  
+
+
 ### Sparse Pooling Transforms and Preserves the Whole feature map
 With the feature map preserved while the information of both sensors are fused, not only detection but also semantic segmentation and other tasks with fused features.  
 One-stage detection framework can be utilized without RoI pooling which improves efficiency.  
