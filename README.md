@@ -17,7 +17,7 @@ Results will be updated.
 This is the introduction of the extension of the published work [**Fusing Bird View LIDAR Point Cloud and Front View Camera Image for Deep Object Detection**](https://arxiv.org/abs/1711.06703). The code is released on the github [Sparse_Pooling](https://github.com/ZiningWang/Sparse_Pooling). The problem considered here is the feature fusion of different sensors in CNNs shown as the figure below
 
 p align="center">
-	<img src="figures/Feature_and_Proposal_Fusion.png" width="480" title="Feature and Proposal Fusion">  <br>
+	<img src="figures/Feature_and_Proposal_Fusion.png" width="600" title="Feature and Proposal Fusion">  <br>
 	<b> Feature and Proposal Fusion Networks</b>
 </p>
 
@@ -39,14 +39,14 @@ The following figure shows the integration of SHPL with Avod-FPN. It improves th
 
 
 <p align="center">
-	<img src="figures/avod-fpn-SHPL-table.png" width="480" title="Efficiency and Performance on Avod-FPN">  <br>
+	<img src="figures/avod-fpn-SHPL-table.png" width="600" title="Efficiency and Performance on Avod-FPN">  <br>
 	<b> Efficiency and Performance on Avod-FPN (Validation Set) </b>
 </p>
 
 Here is the change of structure:
 
 <p align="center">
-	<img src="figures/avod-fpn-with-SHPL.png" width="480" title="Avod with SHPL">  <br>
+	<img src="figures/avod-fpn-with-SHPL.png" width="600" title="Avod with SHPL">  <br>
 	<b> Avod with SHPL</b>
 </p>
 
