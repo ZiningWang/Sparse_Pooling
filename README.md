@@ -15,12 +15,16 @@ Results will be updated.
 
 ## <a name="id2"></a>Sparse Non-homogeneous Pooling for Feature Map Fusion of LIDAR and Camera
 This is the introduction of the extension of the published work [**Fusing Bird View LIDAR Point Cloud and Front View Camera Image for Deep Object Detection**](https://arxiv.org/abs/1711.06703). The code is released on the github [Sparse_Pooling](https://github.com/ZiningWang/Sparse_Pooling). The problem considered here is the feature fusion of different sensors in CNNs shown as the figure below
-![Feature Fusion Network v.s. Proposal Fusion Network](figures/Feature_and_Proposal_Fusion.png)
+
+p align="center">
+	<img src="figures/Feature_and_Proposal_Fusion.png" width="480" title="Feature and Proposal Fusion">  <br>
+	<b> Feature and Proposal Fusion Networks</b>
+</p>
 
 The fusion happens at the middle-stage which is of the best performance according to the Kitti Benchmark on July 23, 2018. The middle-stage fusion propose to fuse features after the convolution and down-sampling operations of the raw data and before the region proposal network (RPN). The fusion keeps the training of the network end-to-end.
 <p align="center">
-	<img src="figures/middle-stage-fusion.png" width="640" title="middle-stage fusion">  <br>
-	<b> middle-stage fusion </b>
+	<img src="figures/middle-stage-fusion.png" width="480" title="middle-stage fusion">  <br>
+	<b> Middle-stage Fusion </b>
 </p>
 The main contributions of the Sparse Non-homogeneous Pooling Layer (SHPL) are:  
 
@@ -32,9 +36,19 @@ One-stage detection framework can be utilized without RoI pooling which improves
 
 ### Easy to Incorperate with Existing Networks and Very Little Overhead
 The following figure shows the integration of SHPL with Avod-FPN. It improves the average precision (AP) by feature fusion, adding a subtle overhead to the mean inference time on the validation dataset.
-![Avod-FPN-SHPL table](figures/avod-fpn-SHPL-table.png)  
 
-![Avod-FPN-SHPL structure](figures/avod-fpn-with-SHPL.png)
+
+<p align="center">
+	<img src="figures/avod-fpn-SHPL-table.png" width="480" title="Efficiency and Performance on Avod-FPN">  <br>
+	<b> Efficiency and Performance on Avod-FPN (Validation Set) </b>
+</p>
+
+Here is the change of structure:
+
+<p align="center">
+	<img src="figures/avod-fpn-with-SHPL.png" width="480" title="Avod with SHPL">  <br>
+	<b> Avod with SHPL</b>
+</p>
 
 ## Usage
 The following two networks can be downloaded and run separately.
