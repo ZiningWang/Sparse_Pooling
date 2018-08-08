@@ -43,12 +43,7 @@ The following figure shows the integration of SHPL with Avod-FPN. It improves th
 	<b> Efficiency and Performance on Avod-FPN (Validation Set) </b>
 </p>
 
-Here is the change of structure:
 
-<p align="center">
-	<img src="figures/avod-fpn-with-SHPL.png" width="600" title="Avod with SHPL">  <br>
-	<b> Avod with SHPL</b>
-</p>
 
 ## Usage
 The following two networks can be downloaded and run separately.
@@ -71,6 +66,12 @@ This is for avod.
 `rpn_model.py`:  See code under `#WZN`. Add placeholders and Sparse Pooling layer before rpn (controled by new parameters in config)  
 `model.proto`:   Add 5 more parameters to control Sparse Pooling
 
+Here is the change of the structure:
+
+<p align="center">
+	<img src="figures/avod-fpn-with-SHPL.png" width="600" title="Avod with SHPL">  <br>
+	<b> Avod-FPN with SHPL</b>
+</p>
 
 ## Reference
 The 'Non-homogeneous' term came from [Spatial Transformer Networks](https://github.com/kevinzakka/spatial-transformer-network)
