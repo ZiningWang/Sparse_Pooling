@@ -16,7 +16,7 @@ Results will be updated.
 ## <a name="id2"></a>Sparse Non-homogeneous Pooling for Feature Map Fusion of LIDAR and Camera
 This is the introduction of the extension of the published work [**Fusing Bird View LIDAR Point Cloud and Front View Camera Image for Deep Object Detection**](https://arxiv.org/abs/1711.06703). The code is released on the github [Sparse_Pooling](https://github.com/ZiningWang/Sparse_Pooling). The problem considered here is the feature fusion of different sensors in CNNs shown as the figure below
 
-p align="center">
+<p align="center">
 	<img src="figures/Feature_and_Proposal_Fusion.png" width="600" title="Feature and Proposal Fusion">  <br>
 	<b> Feature and Proposal Fusion Networks</b>
 </p>
